@@ -30,7 +30,7 @@ const CarsList = async ({ carsList }: { carsList: Car[] }) => {
 
                 <div className="home__cars-wrapper">
                     {carsList.map((car) => (
-                        <CarCard car={car} />
+                        <CarCard key={`${car.make} ${car.model}`} car={car} />
                     ))}
                 </div>
 
